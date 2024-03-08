@@ -1,8 +1,15 @@
 # Cifrado DES
 ## Introducción
+### ¿Qué es y qué hace DES?
 DES es un algoritmo de encriptación inventado por IBM en 1970 bajo el nombre "Lucifer". 
 En 1977 fue adoptado por el NIST (National Institute of Standards and Technology) y por la NSA (National Security Agency) como su estándar nacional.
-En 1981 este algoritmo fue adoptado también por ANSI.
+En 1981 este algoritmo fue adoptado también por ANSI. Cifra un bloque con tamaño de 64 bits es decir 8 bytes. Para cada bloque de 64 bits de entrada se obtienen 64 bits a la salida, es decir, el tamaño del fichero resultante no crece ni decrece.
+### ¿Cómo funciona su algoritmo?
+El algoritmo aplica sustituciones (cambios de unos valores por otros) y permutaciones (cambios en la posición que ocupan los bits). 
+El proceso de encriptación se realiza en 16 rounds, y cada round lleva a cabo la misma serie de sustituciones y permutaciones.
+### ¿Cómo de seguro es?
+El punto débil de DES no está en el algoritmo, sino en el tamaño de la clave que da lugar a demasiadas pocas claves posibles y 
+es susceptible de sufrir un ataque. Actualmente un algoritmo de clave secreta se considera fuerte si tiene una clave de 128 bits o mayor. 
 ## Explicación del proyceto
 El proyecto cuenta con tres clases:
 ### - DESSimpleManager.java
@@ -141,4 +148,3 @@ public class DescifradorDESSimple {
     }
 }
 ```
-## Conclusión
